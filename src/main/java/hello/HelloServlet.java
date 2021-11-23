@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.math.*;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 /**
  *
  * @author viter
@@ -148,7 +150,8 @@ public class HelloServlet extends HttpServlet {
                 out.println("<br>");
             }
             out.println("</div>");
-            out.println ("Determinante : "+ calcular_determinantes(matriz)%.2f);
+            NumberFormat formatação=new DecimalFormat("#0.00");
+            out.println ("Determinante : "+ formatação.format(calcular_determinantes(matriz)));
             out.println ("</p>");
             out.println("</body>");
             out.println("</html>");
@@ -201,7 +204,8 @@ public class HelloServlet extends HttpServlet {
                 out.println("</tr>");
                 out.println("<br>");
             }
-            out.println ("Determinante : "+ calcular_determinantes(matriz)%.2f);
+            NumberFormat formatação=new DecimalFormat("#0.00");
+            out.println ("Determinante : "+ formatação.format(calcular_determinantes(matriz)));
             out.println ("</p>");
             out.println("</body>");
             out.println("</html>");
