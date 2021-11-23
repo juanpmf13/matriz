@@ -132,6 +132,18 @@ public class HelloServlet extends HttpServlet {
                     + " #tab{"
                     + "width: 1024px; margin-top:10px;margin:0 auto;"
                     + "}");
+            out.println("table, td, th {\n" +
+                        "  border: 1px solid black;\n" +
+                        "}\n" +
+                        "\n" +
+                        "table {\n" +
+                        "  border-collapse: collapse;\n" +
+                        "  width: 100%;\n" +
+                        "}\n" +
+                        "\n" +
+                        "td {\n" +
+                        "  text-align: center;\n" +
+                        "}");
             out.println("</style>");;
             out.println("</head>");
             out.println("<body>");
@@ -187,12 +199,28 @@ public class HelloServlet extends HttpServlet {
             out.println("<title>Servlet HelloServlet</title>");        
             out.println("<style type=\"text/css\">");
             out.println("body{ margin:0;"
-                    + "padding:0; backgound-color: #c0ffc1; text-align:center;}");
+                    + "padding:0; backgound-color: #c0ffc1; text-align:center;}"
+                    + " #tab{"
+                    + "width: 1024px; margin-top:10px;margin:0 auto;"
+                    + "}");
+            out.println("table, td, th {\n" +
+                        "  border: 1px solid black;\n" +
+                        "}\n" +
+                        "\n" +
+                        "table {\n" +
+                        "  border-collapse: collapse;\n" +
+                        "  width: 100%;\n" +
+                        "}\n" +
+                        "\n" +
+                        "td {\n" +
+                        "  text-align: center;\n" +
+                        "}");
             out.println("</style>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>");
+            out.println("<div id = \"tab\" >");
             out.println("<table border = \"1\"");
             for(int i =0 ;i<matriz.length;i++){
                 out.println("<tr>");
@@ -204,6 +232,7 @@ public class HelloServlet extends HttpServlet {
                 out.println("</tr>");
                 out.println("<br>");
             }
+            out.println("</div>");
             NumberFormat formatação=new DecimalFormat("#0.00");
             out.println ("Determinante : "+ formatação.format(calcular_determinantes(matriz)));
             out.println ("</p>");
