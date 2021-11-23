@@ -133,9 +133,7 @@ public class HelloServlet extends HttpServlet {
                     + "width: 1024px; margin-top:10px;margin:0 auto;"
                     + "}");
             out.println("table, td, th {\n" +
-                        "  border: 1px solid black; "
-                        + " width=300 height=100;"
-                        + " text-align: center;  bgcolor=\"green\";\n" +
+                        "  border: 1px solid black;\n" +
                         "}\n" +
                         "\n" +
                         "table {\n" +
@@ -152,7 +150,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>");
             out.println("<div id = \"tab\">");
-            out.println("<table border = \"1\"");
+            out.println("<table border = \"1\" bgcolor=\"green\" align: center  width=300 height=100  ");
             for(int i =0 ;i<matriz.length;i++){
                 out.println("<tr>");
                 for(int j =0 ;j<matriz.length;j++){
@@ -206,9 +204,7 @@ public class HelloServlet extends HttpServlet {
                     + "width: 1024px; margin-top:10px;margin:0 auto;"
                     + "}");
             out.println("table, td, th {\n" +
-                        "  border: 1px solid black; "
-                        + " width=300 height=100;"
-                        + " text-align: center; bgcolor=\"green\"; \n" +
+                        "  border: 1px solid black;  \n" +
                         "\n" +
                         "table {\n" +
                         "  border-collapse: collapse;\n" +
@@ -224,7 +220,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>");
             out.println("<div id = \"tab\" >");
-            out.println("<table border = \"1\"");
+            out.println("<table border = \"1\" bgcolor=\"green\" align: center  width=300 height=100  ");
             for(int i =0 ;i<matriz.length;i++){
                 out.println("<tr>");
                 for(int j =0 ;j<matriz.length;j++){
