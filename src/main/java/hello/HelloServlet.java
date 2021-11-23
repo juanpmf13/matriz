@@ -125,8 +125,9 @@ public class HelloServlet extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet HelloServlet</title>");            
             out.println("<style type=\"text/css\">");
-            out.println("body{ backgound-color= #c0ffc1;}");
-            out.println("</style>");
+            out.println("body{ margin:0;"
+                    + "padding:0; backgound-color: #c0ffc1; text-align:center;}");
+            out.println("</style>");;
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
@@ -177,7 +178,8 @@ public class HelloServlet extends HttpServlet {
             out.println("<head>");
             out.println("<title>Servlet HelloServlet</title>");        
             out.println("<style type=\"text/css\">");
-            out.println("body{ backgound-color: #c0ffc1;}");
+            out.println("body{ margin:0;"
+                    + "padding:0; backgound-color: #c0ffc1; text-align:center;}");
             out.println("</style>");
             out.println("</head>");
             out.println("<body>");
