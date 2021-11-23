@@ -133,7 +133,8 @@ public class HelloServlet extends HttpServlet {
                     + "width: 1024px; margin-top:10px;margin:0 auto;"
                     + "}");
             out.println("table, td, th {\n" +
-                        "  border: 1px solid black;\n" +
+                        "  border: 1px solid black; "
+                        + " width=300 height=100 \n" +
                         "}\n" +
                         "\n" +
                         "table {\n" +
@@ -204,8 +205,8 @@ public class HelloServlet extends HttpServlet {
                     + "width: 1024px; margin-top:10px;margin:0 auto;"
                     + "}");
             out.println("table, td, th {\n" +
-                        "  border: 1px solid black;\n" +
-                        "}\n" +
+                        "  border: 1px solid black; "
+                        + " width=300 height=100 \n" +
                         "\n" +
                         "table {\n" +
                         "  border-collapse: collapse;\n" +
