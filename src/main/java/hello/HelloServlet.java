@@ -116,7 +116,7 @@ public class HelloServlet extends HttpServlet {
                 matriz[2][i]=Double.parseDouble(request.getParameter("c"+String.valueOf(i)));
                 matriz[3][i]=Double.parseDouble(request.getParameter("d"+String.valueOf(i)));
             }
-        matriz= transforma(matriz);
+        //matriz= transforma(matriz);
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -164,7 +164,7 @@ public class HelloServlet extends HttpServlet {
                 matriz[2][i]=Double.parseDouble(request.getParameter("c"+String.valueOf(i)));
                 matriz[3][i]=Double.parseDouble(request.getParameter("d"+String.valueOf(i)));
             }
-        matriz= transforma(matriz);
+        //matriz= transforma(matriz);
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
