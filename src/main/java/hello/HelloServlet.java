@@ -128,10 +128,15 @@ public class HelloServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>");
+            out.println("<table border = \"1\"");
             for(int i =0 ;i<matriz.length;i++){
+                out.println("<tr>");
                 for(int j =0 ;j<matriz.length;j++){
+                    out.println("<td>");
                     out.println(matriz[i][j]+" ");
+                    out.println("</td>");
                 }
+                out.println("</tr>");
                 out.println("<br>");
             }
             out.println ("</p>");
