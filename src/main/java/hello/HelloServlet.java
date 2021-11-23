@@ -175,7 +175,10 @@ public class HelloServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HelloServlet</title>");            
+            out.println("<title>Servlet HelloServlet</title>");        
+            out.println("<style type=\"text/css\">");
+            out.println("body{ backgound-color= #c0ffc1;}");
+            out.println("</style>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
