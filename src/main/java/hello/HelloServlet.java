@@ -139,6 +139,7 @@ public class HelloServlet extends HttpServlet {
                 out.println("</tr>");
                 out.println("<br>");
             }
+            out.println ("Determinante : "+ calcular_determinantes(matriz));
             out.println ("</p>");
             out.println("</body>");
             out.println("</html>");
@@ -187,6 +188,7 @@ public class HelloServlet extends HttpServlet {
                 out.println("</tr>");
                 out.println("<br>");
             }
+            out.println ("Determinante : "+ calcular_determinantes(matriz));
             out.println ("</p>");
             out.println("</body>");
             out.println("</html>");
