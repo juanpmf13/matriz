@@ -159,10 +159,10 @@ public class HelloServlet extends HttpServlet {
         double[][] matriz;
         matriz = new double [4][4];
         for(int i =0; i<4 ; i++){
-                matriz[0][i]=Double.parseDouble(request.getParameter("a"+String.valueOf(i)));
-                matriz[1][i]=Double.parseDouble(request.getParameter("b"+String.valueOf(i)));
-                matriz[2][i]=Double.parseDouble(request.getParameter("c"+String.valueOf(i)));
-                matriz[3][i]=Double.parseDouble(request.getParameter("d"+String.valueOf(i)));
+                matriz[i][0]=Double.parseDouble(request.getParameter("a"+String.valueOf(i)));
+                matriz[i][1]=Double.parseDouble(request.getParameter("b"+String.valueOf(i)));
+                matriz[i][2]=Double.parseDouble(request.getParameter("c"+String.valueOf(i)));
+                matriz[i][3]=Double.parseDouble(request.getParameter("d"+String.valueOf(i)));
             }
         matriz= transforma(matriz);
         response.setContentType("text/html;charset=UTF-8");
