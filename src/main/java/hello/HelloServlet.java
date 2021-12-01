@@ -112,11 +112,15 @@ public class HelloServlet extends HttpServlet {
         
         double[][] matriz;
         matriz = new double [4][4];
+        boolean valido= true;
         for(int i =0; i<4 ; i++){
+            if(request.getParameter("a"+String.valueOf(i))!= null && request.getParameter("b"+String.valueOf(i))!= null&&
+                    request.getParameter("c"+String.valueOf(i))!= null && request.getParameter("d"+String.valueOf(i))!= null){
                 matriz[i][0]=Double.parseDouble(request.getParameter("a"+String.valueOf(i)));
                 matriz[i][1]=Double.parseDouble(request.getParameter("b"+String.valueOf(i)));
                 matriz[i][2]=Double.parseDouble(request.getParameter("c"+String.valueOf(i)));
                 matriz[i][3]=Double.parseDouble(request.getParameter("d"+String.valueOf(i)));
+                }
             }
         matriz= transforma(matriz);
         response.setContentType("text/html;charset=UTF-8");
@@ -149,6 +153,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>");
+            if(valido==true){
             out.println("<div id = \"tab\">");
             out.println("<table border = \"1\" bgcolor=\"green\" align: center  width=300 height=100  ");
             for(int i =0 ;i<matriz.length;i++){
@@ -162,6 +167,9 @@ public class HelloServlet extends HttpServlet {
                 out.println("<br>");
             }
             out.println("</div>");
+            }
+            else{
+            out.print("matriz invalida");}
             NumberFormat formatação=new DecimalFormat("#0.00");
             out.println ("Determinante : "+ formatação.format(calcular_determinantes(matriz)));
             out.println ("</p>");
@@ -183,11 +191,15 @@ public class HelloServlet extends HttpServlet {
             throws ServletException, IOException {
         double[][] matriz;
         matriz = new double [4][4];
+        boolean valido= true;
         for(int i =0; i<4 ; i++){
+            if(request.getParameter("a"+String.valueOf(i))!= null && request.getParameter("b"+String.valueOf(i))!= null&&
+                    request.getParameter("c"+String.valueOf(i))!= null && request.getParameter("d"+String.valueOf(i))!= null){
                 matriz[i][0]=Double.parseDouble(request.getParameter("a"+String.valueOf(i)));
                 matriz[i][1]=Double.parseDouble(request.getParameter("b"+String.valueOf(i)));
                 matriz[i][2]=Double.parseDouble(request.getParameter("c"+String.valueOf(i)));
                 matriz[i][3]=Double.parseDouble(request.getParameter("d"+String.valueOf(i)));
+                }
             }
         matriz= transforma(matriz);
         response.setContentType("text/html;charset=UTF-8");
@@ -196,7 +208,7 @@ public class HelloServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HelloServlet</title>");        
+            out.println("<title>Servlet HelloServlet</title>");            
             out.println("<style type=\"text/css\">");
             out.println("body{ margin:0;"
                     + "padding:0; backgound-color: #c0ffc1; text-align:center;}"
@@ -204,7 +216,8 @@ public class HelloServlet extends HttpServlet {
                     + "width: 1024px; margin-top:10px;margin:0 auto;"
                     + "}");
             out.println("table, td, th {\n" +
-                        "  border: 1px solid black;  \n" +
+                        "  border: 1px solid black;\n" +
+                        "}\n" +
                         "\n" +
                         "table {\n" +
                         "  border-collapse: collapse;\n" +
@@ -214,12 +227,13 @@ public class HelloServlet extends HttpServlet {
                         "td {\n" +
                         "  text-align: center;\n" +
                         "}");
-            out.println("</style>");
+            out.println("</style>");;
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HelloServlet</h1>");
             out.println("<p>");
-            out.println("<div id = \"tab\" >");
+            if(valido==true){
+            out.println("<div id = \"tab\">");
             out.println("<table border = \"1\" bgcolor=\"green\" align: center  width=300 height=100  ");
             for(int i =0 ;i<matriz.length;i++){
                 out.println("<tr>");
@@ -232,6 +246,9 @@ public class HelloServlet extends HttpServlet {
                 out.println("<br>");
             }
             out.println("</div>");
+            }
+            else{
+            out.print("matriz invalida");}
             NumberFormat formatação=new DecimalFormat("#0.00");
             out.println ("Determinante : "+ formatação.format(calcular_determinantes(matriz)));
             out.println ("</p>");
