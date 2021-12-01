@@ -121,6 +121,9 @@ public class HelloServlet extends HttpServlet {
                 matriz[i][2]=Double.parseDouble(request.getParameter("c"+String.valueOf(i)));
                 matriz[i][3]=Double.parseDouble(request.getParameter("d"+String.valueOf(i)));
                 }
+            else{
+            valido=false;
+            }
             }
         matriz= transforma(matriz);
         response.setContentType("text/html;charset=UTF-8");
