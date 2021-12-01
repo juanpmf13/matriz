@@ -166,7 +166,8 @@ public class HelloServlet extends HttpServlet {
             out.println ("Determinante : "+ formatação.format(calcular_determinantes(matriz)));
             out.println ("</p>");
             out.println("</body>");
-            out.println("</html>");
+            out.println("</html>");  
+            
         }
     }
 
